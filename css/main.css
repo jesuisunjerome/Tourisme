@@ -1,0 +1,766 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Modak&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+header #telephone:hover {
+    color: darkcyan !important;
+    font-weight: 500;
+}
+
+#menuPrincipal,
+footer #secondPart,
+.dropdown-menu {
+    background: #162e44;
+}
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+    color: #162e44 !important;
+    background: #fff;
+}
+
+#menuPrincipal #navbarResponsive .nav-item:hover {
+    background: rgba(0, 139, 139, .1);
+}
+
+#menuPrincipal #navbarResponsive .nav-item.active:hover {
+    background: rgba(0, 139, 139, 0);
+}
+
+#menuPrincipal #navbarResponsive .nav-item.active .nav-link::before {
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+    transition-delay: 0s, .2s;
+}
+
+#menuPrincipal #navbarResponsive .nav-item .nav-link:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+}
+
+#menuPrincipal #navbarResponsive .nav-item .nav-link::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background: rgba(0, 139, 139, .1);
+    border-top: 3px solid darkcyan;
+    transform: translate3d(-100%, 0, 0);
+    transition: all .35s cubic-bezier(.05, .29, .11, 1.54), height .3s ease;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+}
+
+.section {
+    height: 40vh;
+    position: relative;
+}
+
+
+/*****************************************************
+                    Accueil 
+*****************************************************/
+#carouselAccueil .carousel-inner {
+    height: 85vh;
+}
+
+#carouselAccueil .carousel-item,
+#carouselAccueil .carousel-item img {
+    max-height: 100%;
+}
+
+#carouselAccueil .carousel-caption {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    z-index: 10;
+    color: #fff;
+    text-align: left;
+    transform: translate(10%, -50%);
+    padding: 0;
+    bottom: inherit;
+    right: inherit;
+}
+
+#carouselAccueil .carousel-caption h3,
+#carouselAccueil .carousel-caption a {
+    text-shadow: 2px 2px 8px #000;
+}
+
+#carouselAccueil .carousel-caption h3:first-child {
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-size: 1rem;
+}
+
+#carouselAccueil .carousel-caption h3:nth-child(2) {
+    line-height: 2;
+    letter-spacing: 2px;
+    font-size: 3rem;
+}
+
+#carouselAccueil .carousel-caption a:hover {
+    border: none !important;
+    text-shadow: none;
+}
+
+#carouselAccueil .carousel-indicators {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    left: inherit;
+    z-index: 15;
+    display: inherit;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+    list-style: none;
+}
+
+.carousel .carousel-indicators li {
+    border-radius: 0%;
+}
+
+.carousel .carousel-indicators li.active {
+    background: darkcyan;
+}
+
+#destination,
+#section8 {
+    background: #eee;
+    z-index: 100;
+}
+
+#destination .destinationCard {
+    top: -110px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cardTitle {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#destinationLink {
+    margin-top: -7rem;
+}
+
+#section3,
+#section4,
+#section5,
+#section7 {
+    background: #fff;
+}
+
+#section3 h3,
+#section4 h3 {
+    letter-spacing: 5px;
+}
+
+#section3 .nav {
+    border-bottom: 3px solid #ddd;
+}
+
+#section3 .nav-link {
+    position: relative;
+    font-weight: normal;
+}
+
+#section3 .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background: darkcyan;
+    transition: .22s ease;
+}
+
+#section3 .nav-link.active::after {
+    width: 100%;
+}
+
+#section3 .nav-link:hover,
+#section3 .nav-link.active,
+footer a:hover,
+#navbarSocialMedia a:hover,
+a#destinationLink:hover {
+    color: darkcyan !important;
+}
+
+#section4 .estilo {
+    position: relative;
+    padding: 30px 18px;
+    min-height: 220px;
+    transition: all .2s ease;
+    z-index: 1;
+}
+
+#section4 .estilo::before {
+    content: '';
+    position: absolute;
+    border: 5px solid #eee;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: all .2s ease;
+    z-index: -1;
+}
+
+#section4 .estilo:hover {
+    transition-delay: .1s;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .17);
+}
+
+#section4 .estilo:hover::before {
+    border-width: 0;
+}
+
+#section4 a,
+#section5 a {
+    transition: .5s ease-in-out;
+}
+
+#section4 a:hover,
+#section5 a:hover:first-child,
+#section5 .notes a:hover {
+    color: darkcyan !important;
+}
+
+#section5 .price {
+    position: absolute;
+    padding: 30px 17px 26px;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    transform: translate(0%, 0%);
+    background: darkcyan;
+}
+
+#section6 {
+    background: url('../img/Accueil/people-relaxing-champ-de-mars-franck-fontain-1024x576.jpg') center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 60vh;
+}
+
+#section7 {
+    position: relative;
+}
+
+#section7::before,
+#section7::after {
+    background-color: #fff;
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 50px;
+    top: -1rem;
+}
+
+#section7::before {
+    transform: skew(0, -2deg);
+    right: 50%;
+}
+
+#section7::after {
+    transform: skew(0, 2deg);
+    left: 50%;
+}
+
+#section7 .row .border {
+    position: relative;
+}
+
+#section7 .row .border::before {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: darkred;
+    top: 0;
+    left: 0;
+}
+
+#section7 .row .border::after {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 30px;
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 100%;
+    background: #fc3;
+    box-shadow: 0 0 2px;
+}
+
+#section7 .missionBg {
+    height: 290px;
+    background: url('../img/Accueil/diner-en-blanc.jpg') center no-repeat;
+    background-size: cover;
+}
+
+#section7 .missionBg .mission {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+#section7 .missionBg .mission::before {
+    position: absolute;
+    content: '';
+    width: 50%;
+    background: red;
+    left: 50%;
+    height: 100%;
+    opacity: .1;
+}
+
+#section7 .missionBg .mission::after {
+    position: absolute;
+    content: '';
+    width: 10%;
+    height: 20%;
+    font-size: 2rem;
+    right: 0%;
+    top: -10%;
+    background: red;
+    opacity: .1;
+}
+
+.specialMargin {
+    margin-bottom: 46vh;
+}
+
+#section8 {
+    position: relative;
+}
+
+#section8::before,
+#section8::after {
+    background-color: #eee;
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 50px;
+    top: -1rem;
+}
+
+#section8::before {
+    transform: skew(0, -2deg);
+    right: 50%;
+}
+
+#section8::after {
+    transform: skew(0, 2deg);
+    left: 50%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: -10000000000000000;
+}
+
+footer #firstPart {
+    background: rgba(22, 46, 68, .95);
+}
+
+
+/*****************************************************
+                    Destinations 
+*****************************************************/
+#destinationIntroBg {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url('../img/Accueil/bassin-zim-anton-lau_hero.jpg') center no-repeat;
+    background-size: cover;
+    animation: animBackground 70s linear infinite;
+    transform: translate3d(-75px, -75px, 0);
+    z-index: -1000000000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(100% + 100px);
+    height: calc(100% + 100px);
+}
+
+@keyframes animBackground {
+    25% {
+        transform: translate3d(-100px, -100px, 0);
+    }
+
+    75% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.breadcrumb-item a {
+    letter-spacing: -2px;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    display: inline-block;
+    padding: 0 .5rem;
+    color: #fff;
+    font-size: 1.5rem;
+    content: "/";
+}
+
+#destinationSection1 {
+    position: relative;
+}
+
+
+#destinationSection1 .container-fluid::before {
+    position: absolute;
+    content: 'Haïti';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 4px 4px 1px #000;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Modak', fantasy;
+    background: darkcyan;
+    width: 10%;
+    left: 50%;
+    top: 15%;
+    height: 20%;
+    z-index: 1;
+    opacity: .4;
+    animation: animTitle 15s linear infinite;
+}
+
+@keyframes animTitle {
+    0% {
+        text-shadow: 1px 1px 5px #000;
+    }
+
+    75% {
+        text-shadow: 3px 3px 1px #000;
+    }
+}
+
+.sectionImg {
+    height: 95vh;
+}
+
+#destinationImg {
+    background: url('../img/Accueil/bassin-zim-anton-lau_hero.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+#destinationStyleBg {
+    position: relative;
+}
+
+#destinationText::before {
+    position: absolute;
+    content: 'Bassin Zim';
+    color: rgba(0, 0, 0, .1);
+    top: 50%;
+    left: 25%;
+    font-size: 50px;
+    font-family: 'Modak', cursive;
+}
+
+.lineTitle {
+    position: relative;
+}
+
+.lineH3::before {
+    position: absolute;
+    left: 46%;
+    top: 0;
+    content: '';
+    width: 15%;
+    height: 3px;
+    transform: rotate(180deg);
+    background: darkcyan;
+    opacity: .2;
+    animation: animLine 15s linear;
+}
+
+.lineH3::after {
+    position: absolute;
+    right: 46%;
+    bottom: 0;
+    content: '';
+    width: 15%;
+    height: 3px;
+    transform: rotate(180deg);
+    background: darkcyan;
+    opacity: .2;
+    animation: animLine 16s linear;
+}
+
+@keyframes animLine {
+    0% {
+        width: 0%;
+    }
+
+    75% {
+        width: 20%;
+        opacity: .5;
+    }
+}
+
+.boxSize {
+    height: 250px;
+}
+
+.boxSize img {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+/*****************************************************
+                    Ministere 
+*****************************************************/
+#ministereIntro {
+    position: relative;
+    height: 90vh;
+}
+
+#ministereIntroBg {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('../img/Ministere/light.jpg') center no-repeat;
+    background-size: cover;
+    z-index: -1000000000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#ministereMission nav,
+#ministereOrganigramme nav {
+    background: rgba(22, 46, 68, .95);
+    position: sticky;
+    top: 4rem;
+    z-index: 2;
+}
+
+#ministereMission .row {
+    position: relative;
+}
+
+.titre1 {
+    position: sticky;
+    z-index: 1;
+    top: 10rem;
+    background: url(https://images.pexels.com/photos/416430/pexels-photo-416430.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) center center no-repeat;
+    background-size: cover;
+}
+
+#ministereMission .titreMission,
+#ministereOrganigramme .titreOrgani {
+    z-index: -1;
+    color: darkcyan;
+}
+
+#ministereMission .titreMission::before {
+    position: absolute;
+    content: '';
+    background: url(https://images.pexels.com/photos/1242348/pexels-photo-1242348.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;
+    background: #fff;
+    z-index: -2;
+    width: 65%;
+    left: 50%;
+    height: 100%;
+}
+
+#ministereOrganigramme .titreOrgani::before {
+    position: absolute;
+    content: '';
+    background: url(https://images.pexels.com/photos/1242348/pexels-photo-1242348.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;
+    background: #fff;
+    z-index: -2;
+    width: 75%;
+    right: 40%;
+    height: 100%;
+}
+
+#missionDetail,
+#organiDetail {
+    background: url(https://images.pexels.com/photos/234272/pexels-photo-234272.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) center center no-repeat;
+    background-size: cover;
+}
+
+#missionDetail {
+    padding-left: 5rem;
+}
+
+#organiDetail {
+    padding-right: 5rem;
+}
+
+#missionDetail .border {
+    border-top-width: 5px !important;
+}
+
+
+
+/*****************************************************
+                    Contact 
+*****************************************************/
+#contactIntroBg {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(20, 60, 80, 0.8)), url(https://images.pexels.com/photos/1305305/pexels-photo-1305305.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) center no-repeat;
+    background-size: cover;
+    z-index: -1000000000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#contactSection1 p,
+#contactSection1 a {
+    font-family: 'Josefin Sans', sans-serif;
+    color: white !important;
+}
+
+#contactInfo {
+    background: linear-gradient(to top, #162e44, rgba(255, 255, 255, 0.4));
+    height: 60vh;
+}
+
+#sendMail label {
+    color: darkcyan;
+    font-weight: bold;
+}
+
+
+
+
+
+@media only screen and (max-width:768px) {
+    #carouselAccueil .carousel-inner {
+        height: auto;
+    }
+
+    #carouselAccueil .carousel-caption h3:first-child {
+        text-transform: uppercase;
+        letter-spacing: -1px;
+        font-size: inherit;
+    }
+
+    #carouselAccueil .carousel-caption h3:nth-child(2) {
+        line-height: 1;
+        letter-spacing: 2px;
+        font-size: inherit;
+    }
+
+    #carouselAccueil .carousel-indicators {
+        top: 30%;
+    }
+
+    #destination .destinationCard {
+        top: 0 !important;
+    }
+
+    #destinationLink {
+        margin-top: 0;
+    }
+
+    #section4 .estilo {
+        padding: 30px 20px;
+    }
+
+    .noBorderSm {
+        border: none !important;
+    }
+
+    .specialMargin {
+        margin-bottom: 0;
+    }
+
+    footer {
+        position: static;
+        z-index: auto;
+    }
+
+    .boxSize {
+        height: 145px;
+    }
+
+    #ministereMission nav,
+    #ministereOrganigramme nav {
+        top: 3rem;
+    }
+
+    #destinationIntroBg,
+    #ministereIntroBg,
+    #contactIntroBg {
+        animation: none !important;
+        width: 100%;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .sectionImg {
+        height: 35vh;
+    }
+
+    #destinationImg {
+        background: url('../img/Accueil/bassin-zim-anton-lau_hero.jpg') no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: scroll;
+    }
+
+    #destinationSection1 .container-fluid::before,
+    #destinationText::before,
+    #ministereMission .titreMission::before {
+        display: none !important;
+    }
+
+    #missionDetail {
+        background: none;
+    }
+
+    #missionDetail {
+        padding-left: 0;
+    }
+
+    #organiDetail {
+        padding-right: 0;
+    }
+
+}
