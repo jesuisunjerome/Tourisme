@@ -765,11 +765,11 @@ footer #firstPart {
     }
 
     #missionDetail {
-        padding-left: 0;
+        padding-left: 15px;
     }
 
     #organiDetail {
-        padding-right: 0;
+        padding-right: 15px;
     }
 
 }
