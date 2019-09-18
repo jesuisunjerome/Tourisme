@@ -673,7 +673,16 @@ footer #firstPart {
 
 @media only screen and (max-width:768px) {
     #carouselAccueil .carousel-inner {
-        height: auto;
+        height: 85vh;
+    }
+
+    #carouselAccueil .carousel-item,
+    #carouselAccueil .carousel-item img {
+        height: 85vh;
+    }
+
+    #carouselAccueil .carousel-item img {
+        width: auto !important;
     }
 
     #carouselAccueil .carousel-caption h3:first-child {
