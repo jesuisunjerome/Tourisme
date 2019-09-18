@@ -671,6 +671,7 @@ footer #firstPart {
 
 
 
+
 @media only screen and (max-width:768px) {
     #carouselAccueil .carousel-inner {
         height: 85vh;
@@ -772,4 +773,10 @@ footer #firstPart {
         padding-right: 15px;
     }
 
+}
+
+@media (min-width: 644px) and (orientation: landscape) {
+    #carouselAccueil .carousel-item img {
+        width: 100% !important;
+    }
 }
